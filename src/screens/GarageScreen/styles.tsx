@@ -8,4 +8,13 @@ export const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
   },
+  cameraBox: {
+    borderWidth: 2,
+    borderRadius: 10,
+    borderColor: "#fff",
+    overflow: "hidden",
+    position: "relative",
+    width: 350,
+    height: "90%",
+  },
 });
