@@ -3,7 +3,11 @@ import { Button, Image, Text, View } from "react-native";
 import logo from "../../../assets/logo.png";
 import { styles } from "./styles";
 import Divider from "../Divider";
-import { CAR_ASSETS_BASE_URL } from "../../constants/car";
+import {
+  CAR_ASSETS_BASE_URL,
+  CAR_MAX_ID,
+  CAR_MIN_ID,
+} from "../../constants/car";
 import BuyButton from "../BuyButton";
 import { CarModel } from "./props";
 import { handleNextItem, handlePreviousItem, loadCarData } from "./actions";
@@ -45,14 +49,14 @@ const CardView = () => {
     <View style={styles.priceLabelContainer}>
       <Button
         title="<"
-        disabled={carData?.id === 1}
+        disabled={carData?.id === CAR_MIN_ID}
         color={"#01a6b3"}
         onPress={() => handlePreviousItem(carData, setCarData)}
       />
       <Text style={styles.priceLabel}>{carData?.price}</Text>
       <Button
         title=">"
-        disabled={carData?.id === 10}
+        disabled={carData?.id === CAR_MAX_ID}
         color={"#01a6b3"}
         onPress={() => handleNextItem(carData, setCarData)}
       />
