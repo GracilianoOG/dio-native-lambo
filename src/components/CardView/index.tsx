@@ -63,8 +63,10 @@ const CardView = () => {
       <Divider />
       {renderCarDetails()}
       {renderCarImage()}
-      <BuyButton />
-      {renderPriceControls()}
+      <View style={{ paddingHorizontal: 32 }}>
+        <BuyButton />
+        {renderPriceControls()}
+      </View>
     </View>
   );
 };
