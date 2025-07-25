@@ -1,12 +1,22 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Button, Image, Text, View } from "react-native";
 import logo from "../../../assets/logo.png";
 import { styles } from "./styles";
 import Divider from "../Divider";
 import { CAR_ASSETS_BASE_URL } from "../../constants/car";
 import BuyButton from "../BuyButton";
+import { CarModel } from "./props";
+import { loadCarData } from "./actions";
 
 const CardView = () => {
+  const [carData, setCarData] = useState<CarModel | null>(null);
+
+  useEffect(() => {
+    (async () => {
+      await loadCarData(1, setCarData);
+    })();
+  }, []);
+
   const renderLogoBox = () => (
     <View style={styles.logoContainer}>
       <Image style={styles.logo} source={logo} />
@@ -16,7 +26,7 @@ const CardView = () => {
   const renderCarDetails = () => (
     <View style={{ alignItems: "center" }}>
       <Text style={styles.carBrand}>Lamborghini</Text>
-      <Text style={styles.carName}>MODEL</Text>
+      <Text style={styles.carName}>{carData?.carName}</Text>
     </View>
   );
 
@@ -24,7 +34,7 @@ const CardView = () => {
     <Image
       style={styles.carImage}
       source={{
-        uri: `${CAR_ASSETS_BASE_URL}1.png`,
+        uri: `${CAR_ASSETS_BASE_URL}${carData?.id}.png`,
       }}
     />
   );
@@ -32,7 +42,7 @@ const CardView = () => {
   const renderPriceControls = () => (
     <View style={styles.priceLabelContainer}>
       <Button title="<" color={"#01a6b3"} onPress={() => {}} />
-      <Text style={styles.priceLabel}>Valor</Text>
+      <Text style={styles.priceLabel}>{carData?.price}</Text>
       <Button title=">" color={"#01a6b3"} onPress={() => {}} />
     </View>
   );
