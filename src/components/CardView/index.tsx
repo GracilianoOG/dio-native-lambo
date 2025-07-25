@@ -25,7 +25,9 @@ const CardView = () => {
 
   const renderCarDetails = () => (
     <View style={{ alignItems: "center" }}>
-      <Text style={styles.carBrand}>Lamborghini</Text>
+      <Text style={styles.carBrand}>
+        Lamborghini <Text style={styles.carId}>#{carData?.id}</Text>
+      </Text>
       <Text style={styles.carName}>{carData?.carName}</Text>
     </View>
   );

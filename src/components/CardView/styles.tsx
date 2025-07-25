@@ -25,6 +25,7 @@ export const styles = StyleSheet.create({
     fontStyle: "italic",
     fontWeight: "400",
   },
+  carId: { color: "gold", fontWeight: "bold" },
   carName: {
     color: "#fff",
     fontSize: 20,
