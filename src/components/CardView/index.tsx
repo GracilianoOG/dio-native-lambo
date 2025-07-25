@@ -1,5 +1,5 @@
 import React from "react";
-import { Image, Text, View } from "react-native";
+import { Button, Image, Text, View } from "react-native";
 import logo from "../../../assets/logo.png";
 import { styles } from "./styles";
 import Divider from "../Divider";
@@ -29,6 +29,14 @@ const CardView = () => {
     />
   );
 
+  const renderPriceControls = () => (
+    <View>
+      <Button title="<" color={"#01a6b3"} onPress={() => {}} />
+      <Text>Valor</Text>
+      <Button title=">" color={"#01a6b3"} onPress={() => {}} />
+    </View>
+  );
+
   return (
     <View style={styles.container}>
       {renderLogoBox()}
@@ -36,6 +44,7 @@ const CardView = () => {
       {renderCarDetails()}
       {renderCarImage()}
       <BuyButton />
+      {renderPriceControls()}
     </View>
   );
 };
