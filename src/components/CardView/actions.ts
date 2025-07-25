@@ -1,4 +1,5 @@
 import { getCarData } from "../../api/getCars";
+import { CAR_MAX_ID, CAR_MIN_ID } from "../../constants/car";
 import { CarModel } from "./props";
 
 export const loadCarData = async (
@@ -21,7 +22,7 @@ export const handlePreviousItem = async (
   setCarData: React.Dispatch<React.SetStateAction<CarModel | null>>
 ) => {
   try {
-    if (carData && carData?.id > 1) {
+    if (carData && carData?.id > CAR_MIN_ID) {
       const response = await getCarData(carData.id - 1);
 
       if (response) {
@@ -39,7 +40,7 @@ export const handleNextItem = async (
   setCarData: React.Dispatch<React.SetStateAction<CarModel | null>>
 ) => {
   try {
-    if (carData && carData?.id < 10) {
+    if (carData && carData?.id < CAR_MAX_ID) {
       const response = await getCarData(carData.id + 1);
 
       if (response) {
