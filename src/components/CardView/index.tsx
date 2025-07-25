@@ -18,11 +18,21 @@ const CardView = () => {
     </View>
   );
 
+  const renderCarImage = () => (
+    <Image
+      style={styles.carImage}
+      source={{
+        uri: "https://digitalinnovationone.github.io/fake-data-api-lamborghini/assets/1.png",
+      }}
+    />
+  );
+
   return (
     <View style={styles.container}>
       {renderLogoBox()}
       <Divider />
       {renderCarDetails()}
+      {renderCarImage()}
     </View>
   );
 };

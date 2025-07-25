@@ -31,4 +31,11 @@ export const styles = StyleSheet.create({
     fontWeight: "bold",
     textAlign: "center",
   },
+  carImage: {
+    flex: 1,
+    height: "100%",
+    marginBottom: 10,
+    resizeMode: "contain",
+    width: "100%",
+  },
 });
