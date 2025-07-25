@@ -3,6 +3,7 @@ import { Image, Text, View } from "react-native";
 import logo from "../../../assets/logo.png";
 import { styles } from "./styles";
 import Divider from "../Divider";
+import { CAR_ASSETS_BASE_URL } from "../../constants/car";
 
 const CardView = () => {
   const renderLogoBox = () => (
@@ -22,7 +23,7 @@ const CardView = () => {
     <Image
       style={styles.carImage}
       source={{
-        uri: "https://digitalinnovationone.github.io/fake-data-api-lamborghini/assets/1.png",
+        uri: `${CAR_ASSETS_BASE_URL}1.png`,
       }}
     />
   );
