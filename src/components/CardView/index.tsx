@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Button, Image, Text, View } from "react-native";
+import { Image, Text, TouchableOpacity, View } from "react-native";
 import logo from "../../../assets/logo.png";
 import { styles } from "./styles";
 import Divider from "../Divider";
@@ -11,6 +11,7 @@ import {
 import BuyButton from "../BuyButton";
 import { CarModel } from "./props";
 import { handleNextItem, handlePreviousItem, loadCarData } from "./actions";
+import AntDesign from "@expo/vector-icons/AntDesign";
 
 const CardView = () => {
   const [carData, setCarData] = useState<CarModel | null>(null);
@@ -47,19 +48,31 @@ const CardView = () => {
 
   const renderPriceControls = () => (
     <View style={styles.priceLabelContainer}>
-      <Button
-        title="<"
+      <TouchableOpacity
         disabled={carData?.id === CAR_MIN_ID}
-        color={"#01a6b3"}
+        style={[
+          styles.priceArrow,
+          carData?.id === CAR_MIN_ID
+            ? styles.priceArrowDisabled
+            : styles.priceArrowEnabled,
+        ]}
         onPress={() => handlePreviousItem(carData, setCarData)}
-      />
+      >
+        <AntDesign name="arrowleft" size={22} color="#fff" />
+      </TouchableOpacity>
       <Text style={styles.priceLabel}>{carData?.price}</Text>
-      <Button
-        title=">"
+      <TouchableOpacity
         disabled={carData?.id === CAR_MAX_ID}
-        color={"#01a6b3"}
+        style={[
+          styles.priceArrow,
+          carData?.id === CAR_MAX_ID
+            ? styles.priceArrowDisabled
+            : styles.priceArrowEnabled,
+        ]}
         onPress={() => handleNextItem(carData, setCarData)}
-      />
+      >
+        <AntDesign name="arrowright" size={22} color="#fff" />
+      </TouchableOpacity>
     </View>
   );
 

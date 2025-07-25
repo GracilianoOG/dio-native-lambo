@@ -50,4 +50,9 @@ export const styles = StyleSheet.create({
     color: "#fff",
     fontSize: 22,
   },
+  priceArrow: { borderRadius: 5, padding: 6 },
+  priceArrowEnabled: { backgroundColor: "#01a6b3" },
+  priceArrowDisabled: {
+    backgroundColor: "#006168",
+  },
 });
