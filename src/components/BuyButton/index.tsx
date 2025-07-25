@@ -2,8 +2,9 @@ import React from "react";
 import { Text, TouchableOpacity, View } from "react-native";
 import { AntDesign } from "@expo/vector-icons";
 import { styles } from "./styles";
+import { BuyButtonProps } from "./props";
 
-const BuyButton = () => {
+const BuyButton = ({ title }: BuyButtonProps) => {
   return (
     <View style={styles.container}>
       <TouchableOpacity style={styles.button}>
@@ -13,7 +14,7 @@ const BuyButton = () => {
           color="white"
           style={styles.icon}
         />
-        <Text style={styles.buttonText}>Buy This</Text>
+        <Text style={styles.buttonText}>{title}</Text>
       </TouchableOpacity>
     </View>
   );
