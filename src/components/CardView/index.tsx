@@ -2,6 +2,7 @@ import React from "react";
 import { Image, Text, View } from "react-native";
 import logo from "../../../assets/logo.png";
 import { styles } from "./styles";
+import Divider from "../Divider";
 
 const CardView = () => {
   const renderLogoBox = () => (
@@ -10,7 +11,12 @@ const CardView = () => {
     </View>
   );
 
-  return <View style={styles.container}>{renderLogoBox()}</View>;
+  return (
+    <View style={styles.container}>
+      {renderLogoBox()}
+      <Divider />
+    </View>
+  );
 };
 
 export default CardView;
