@@ -1,6 +1,7 @@
 import React from "react";
 import { Text, View } from "react-native";
 import { styles } from "./styles";
+import CardView from "../../components/CardView";
 
 const GarageScreen = () => {
   return (
@@ -16,6 +17,7 @@ const GarageScreen = () => {
         <View
           style={[styles.triangleCorner, styles.triangleCornerBottomRight]}
         ></View>
+        <CardView />
       </View>
     </View>
   );
