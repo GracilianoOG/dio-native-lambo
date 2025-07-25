@@ -4,6 +4,7 @@ import logo from "../../../assets/logo.png";
 import { styles } from "./styles";
 import Divider from "../Divider";
 import { CAR_ASSETS_BASE_URL } from "../../constants/car";
+import BuyButton from "../BuyButton";
 
 const CardView = () => {
   const renderLogoBox = () => (
@@ -34,6 +35,7 @@ const CardView = () => {
       <Divider />
       {renderCarDetails()}
       {renderCarImage()}
+      <BuyButton />
     </View>
   );
 };
