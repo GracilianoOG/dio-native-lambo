@@ -11,6 +11,15 @@ export const styles = StyleSheet.create({
     width: "80%",
   },
   button: {
+    alignItems: "center",
     flexDirection: "row",
+  },
+  buttonText: {
+    color: "#fff",
+    fontStyle: "italic",
+    fontWeight: "bold",
+  },
+  icon: {
+    marginRight: 10,
   },
 });
