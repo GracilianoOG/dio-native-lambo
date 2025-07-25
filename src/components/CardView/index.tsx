@@ -64,7 +64,7 @@ const CardView = () => {
       {renderCarDetails()}
       {renderCarImage()}
       <View style={{ paddingHorizontal: 32 }}>
-        <BuyButton />
+        <BuyButton title="Purchase" />
         {renderPriceControls()}
       </View>
     </View>
