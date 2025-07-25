@@ -6,7 +6,7 @@ export default function App() {
   return (
     <View style={styles.container}>
       <GarageScreen />
-      <StatusBar style="auto" />
+      <StatusBar style="light" />
     </View>
   );
 }
