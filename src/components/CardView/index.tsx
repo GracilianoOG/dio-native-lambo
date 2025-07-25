@@ -6,7 +6,7 @@ import Divider from "../Divider";
 import { CAR_ASSETS_BASE_URL } from "../../constants/car";
 import BuyButton from "../BuyButton";
 import { CarModel } from "./props";
-import { loadCarData } from "./actions";
+import { handleNextItem, handlePreviousItem, loadCarData } from "./actions";
 
 const CardView = () => {
   const [carData, setCarData] = useState<CarModel | null>(null);
@@ -41,9 +41,17 @@ const CardView = () => {
 
   const renderPriceControls = () => (
     <View style={styles.priceLabelContainer}>
-      <Button title="<" color={"#01a6b3"} onPress={() => {}} />
+      <Button
+        title="<"
+        color={"#01a6b3"}
+        onPress={() => handlePreviousItem(carData, setCarData)}
+      />
       <Text style={styles.priceLabel}>{carData?.price}</Text>
-      <Button title=">" color={"#01a6b3"} onPress={() => {}} />
+      <Button
+        title=">"
+        color={"#01a6b3"}
+        onPress={() => handleNextItem(carData, setCarData)}
+      />
     </View>
   );
 
