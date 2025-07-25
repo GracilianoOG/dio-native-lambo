@@ -30,9 +30,9 @@ const CardView = () => {
   );
 
   const renderPriceControls = () => (
-    <View>
+    <View style={styles.priceLabelContainer}>
       <Button title="<" color={"#01a6b3"} onPress={() => {}} />
-      <Text>Valor</Text>
+      <Text style={styles.priceLabel}>Valor</Text>
       <Button title=">" color={"#01a6b3"} onPress={() => {}} />
     </View>
   );
