@@ -4,13 +4,13 @@ import logo from "../../../assets/logo.png";
 import { styles } from "./styles";
 
 const CardView = () => {
-  return (
-    <View style={styles.container}>
-      <View style={styles.logoContainer}>
-        <Image style={styles.logo} source={logo} />
-      </View>
+  const renderLogoBox = () => (
+    <View style={styles.logoContainer}>
+      <Image style={styles.logo} source={logo} />
     </View>
   );
+
+  return <View style={styles.container}>{renderLogoBox()}</View>;
 };
 
 export default CardView;
