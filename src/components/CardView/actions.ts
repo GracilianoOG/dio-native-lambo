@@ -16,6 +16,38 @@ export const loadCarData = async (
   }
 };
 
-export const handlePreviousItem = async () => {};
+export const handlePreviousItem = async (
+  carData: CarModel | null,
+  setCarData: React.Dispatch<React.SetStateAction<CarModel | null>>
+) => {
+  try {
+    if (carData && carData?.id > 1) {
+      const response = await getCarData(carData.id - 1);
 
-export const handleNextItem = async () => {};
+      if (response) {
+        setCarData(response);
+      }
+    }
+  } catch (error) {
+    console.log("Erro ao chamar a API: ", error);
+    setCarData(null);
+  }
+};
+
+export const handleNextItem = async (
+  carData: CarModel | null,
+  setCarData: React.Dispatch<React.SetStateAction<CarModel | null>>
+) => {
+  try {
+    if (carData && carData?.id < 10) {
+      const response = await getCarData(carData.id + 1);
+
+      if (response) {
+        setCarData(response);
+      }
+    }
+  } catch (error) {
+    console.log("Erro ao chamar a API: ", error);
+    setCarData(null);
+  }
+};
