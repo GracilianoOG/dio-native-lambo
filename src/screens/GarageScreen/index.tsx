@@ -6,7 +6,18 @@ const GarageScreen = () => {
   return (
     <View style={styles.container}>
       <Text>Works</Text>
-      <View style={styles.cameraBox}></View>
+      <View style={styles.cameraBox}>
+        <View style={styles.triangleCorner}></View>
+        <View
+          style={[styles.triangleCorner, styles.triangleCornerTopRight]}
+        ></View>
+        <View
+          style={[styles.triangleCorner, styles.triangleCornerBottomLeft]}
+        ></View>
+        <View
+          style={[styles.triangleCorner, styles.triangleCornerBottomRight]}
+        ></View>
+      </View>
     </View>
   );
 };

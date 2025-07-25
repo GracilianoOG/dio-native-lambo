@@ -17,4 +17,29 @@ export const styles = StyleSheet.create({
     width: 350,
     height: "90%",
   },
+  triangleCorner: {
+    borderStyle: "solid",
+    borderTopWidth: 20,
+    borderRightWidth: 20,
+    borderTopColor: "#fff",
+    borderRightColor: "transparent",
+    height: 0,
+    position: "absolute",
+    width: 0,
+  },
+  triangleCornerTopRight: {
+    right: 0,
+    top: 0,
+    transform: [{ rotate: "90deg" }],
+  },
+  triangleCornerBottomLeft: {
+    bottom: 0,
+    left: 0,
+    transform: [{ rotate: "270deg" }],
+  },
+  triangleCornerBottomRight: {
+    bottom: 0,
+    right: 0,
+    transform: [{ rotate: "180deg" }],
+  },
 });
