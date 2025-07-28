@@ -1,15 +1,23 @@
 import React from "react";
-import { Text, View } from "react-native";
-
+import { Image, Text, View } from "react-native";
 import { styles } from "./styles";
+import { SafeAreaView } from "react-native-safe-area-context";
+import { CAR_ASSETS_BASE_URL } from "../../constants/car";
 
 const PurchaseScreen = ({ route }: any) => {
   const { id, carName } = route.params;
 
   return (
-    <View style={styles.container}>
-      <Text>{carName}</Text>
-    </View>
+    <SafeAreaView style={styles.container}>
+      <Image
+        style={styles.carImage}
+        source={{ uri: `${CAR_ASSETS_BASE_URL}${id}.png` }}
+      />
+      <Text style={styles.carName}>{carName}</Text>
+      <Text style={styles.boughtText}>
+        IF YOU WERE RICH, THAT CAR WOULD BE YOURS!
+      </Text>
+    </SafeAreaView>
   );
 };
 
