@@ -7,12 +7,14 @@ export const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "center",
     position: "relative",
+    paddingHorizontal: 8,
   },
   carName: {
     color: "#fff",
     fontWeight: "600",
-    fontSize: 20,
+    fontSize: 28,
     marginBottom: 40,
+    textAlign: "center",
   },
   carImage: {
     resizeMode: "contain",
