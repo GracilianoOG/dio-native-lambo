@@ -3,10 +3,12 @@ import { Text, View } from "react-native";
 
 import { styles } from "./styles";
 
-const PurchaseScreen = () => {
+const PurchaseScreen = ({ route }: any) => {
+  const { id, carName } = route.params;
+
   return (
     <View style={styles.container}>
-      <Text>Works</Text>
+      <Text>{carName}</Text>
     </View>
   );
 };
