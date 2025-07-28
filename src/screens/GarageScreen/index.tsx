@@ -5,7 +5,7 @@ import CardView from "../../components/CardView";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { StatusBar } from "expo-status-bar";
 
-const GarageScreen = () => {
+const GarageScreen = ({ navigation }: any) => {
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.cameraBox}>
@@ -19,7 +19,7 @@ const GarageScreen = () => {
         <View
           style={[styles.triangleCorner, styles.triangleCornerBottomRight]}
         ></View>
-        <CardView />
+        <CardView navigation={navigation} />
       </View>
       <StatusBar style="light" />
     </SafeAreaView>
