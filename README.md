@@ -71,6 +71,16 @@ Os componentes são carregados a partir do arquivo `index.ts` localizado dentro 
     📄 actions.ts -> serviços do componente
 ```
 
+## 📲 Telas
+
+### Tela `Home` ou `Garage`
+
+Tela principal que mostra os carros disponíveis para a compra. O usuário pode navegar entre os carros através das setas que informam o nome, o preço e uma imagem do veículo. Além disso, o usuário pode clicar em "Purchase" que irá abrir uma mensagem perguntando se o mesmo deseja prosseguir com a compra. Ao apertar em "Buy", a próxima tela é carregada.
+
+### Tela `Purchase`
+
+Nessa tela, a foto e o nome do veículo comprado pelo usuário aparecerá aqui.
+
 ## 🛠️ Ferramentas e tecnologias
 
 [![Ferramentas](https://skillicons.dev/icons?i=react,ts,nodejs,npm,vscode,bash)](https://skillicons.dev)
