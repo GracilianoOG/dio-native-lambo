@@ -13,7 +13,7 @@ import { CarModel } from "./props";
 import { handleNextItem, handlePreviousItem, loadCarData } from "./actions";
 import AntDesign from "@expo/vector-icons/AntDesign";
 
-const CardView = () => {
+const CardView = ({ navigation }: any) => {
   const [carData, setCarData] = useState<CarModel | null>(null);
 
   useEffect(() => {
@@ -76,6 +76,10 @@ const CardView = () => {
     </View>
   );
 
+  const handlePurchase = () => {
+    navigation.navigate("Purchase");
+  };
+
   return (
     <View style={styles.container}>
       {renderLogoBox()}
@@ -83,7 +87,7 @@ const CardView = () => {
       {renderCarDetails()}
       {renderCarImage()}
       <View style={{ paddingHorizontal: 32 }}>
-        <BuyButton title="Purchase" />
+        <BuyButton title="Purchase" onPress={handlePurchase} />
         {renderPriceControls()}
       </View>
     </View>
