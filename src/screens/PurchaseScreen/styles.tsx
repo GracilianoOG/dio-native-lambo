@@ -6,6 +6,7 @@ export const styles = StyleSheet.create({
     backgroundColor: "#1e1e20",
     flex: 1,
     justifyContent: "center",
+    position: "relative",
   },
   carName: {
     color: "#fff",
@@ -23,6 +24,12 @@ export const styles = StyleSheet.create({
     fontSize: 14,
     fontStyle: "italic",
     textAlign: "center",
+    width: "100%",
+  },
+  backgroundLogo: {
+    opacity: 0.25,
+    position: "absolute",
+    resizeMode: "contain",
     width: "100%",
   },
 });
