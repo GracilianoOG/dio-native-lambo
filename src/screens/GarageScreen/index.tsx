@@ -3,6 +3,7 @@ import { View } from "react-native";
 import { styles } from "./styles";
 import CardView from "../../components/CardView";
 import { SafeAreaView } from "react-native-safe-area-context";
+import { StatusBar } from "expo-status-bar";
 
 const GarageScreen = () => {
   return (
@@ -20,6 +21,7 @@ const GarageScreen = () => {
         ></View>
         <CardView />
       </View>
+      <StatusBar style="light" />
     </SafeAreaView>
   );
 };
