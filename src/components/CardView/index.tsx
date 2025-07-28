@@ -77,7 +77,7 @@ const CardView = ({ navigation }: any) => {
   );
 
   const handlePurchase = () => {
-    navigation.navigate("Purchase");
+    navigation.navigate("Purchase", carData);
   };
 
   return (
