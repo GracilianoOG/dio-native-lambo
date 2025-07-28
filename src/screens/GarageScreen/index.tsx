@@ -2,10 +2,11 @@ import React from "react";
 import { View } from "react-native";
 import { styles } from "./styles";
 import CardView from "../../components/CardView";
+import { SafeAreaView } from "react-native-safe-area-context";
 
 const GarageScreen = () => {
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
       <View style={styles.cameraBox}>
         <View style={styles.triangleCorner}></View>
         <View
@@ -19,7 +20,7 @@ const GarageScreen = () => {
         ></View>
         <CardView />
       </View>
-    </View>
+    </SafeAreaView>
   );
 };
 
