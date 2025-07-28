@@ -4,7 +4,7 @@ import { AntDesign } from "@expo/vector-icons";
 import { styles } from "./styles";
 import { BuyButtonProps } from "./props";
 
-const BuyButton = ({ title }: BuyButtonProps) => {
+const BuyButton = ({ title, onPress }: BuyButtonProps) => {
   const handlePress = () => {
     Alert.alert(
       "Confirm purchase",
@@ -16,9 +16,7 @@ const BuyButton = ({ title }: BuyButtonProps) => {
         },
         {
           text: "Buy",
-          onPress: () => {
-            console.log("Car bought");
-          },
+          onPress,
         },
       ]
     );
