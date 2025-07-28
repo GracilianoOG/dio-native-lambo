@@ -91,12 +91,16 @@ Nessa tela, a foto e o nome do veículo comprado pelo usuário aparecerá aqui.
 - Desenvolvido com `TypeScript` para garantir tipagem forte e maior segurança.
 - Ferramentas de desenvolvimento com suporte a tipagens do React.
 - Comunicação com a API desenvolvida utilizando `axios`.
+- Navegação entre as telas com `native-stack`.
 
 ## 🔗 Links
 
 - [Digital Innovation One](https://www.dio.me/)
 - [React Native Components](https://reactnative.dev/docs/components-and-apis)
 - [Expo Docs](https://docs.expo.dev/)
+- [React Navigation](https://reactnavigation.org/docs/getting-started/)
+- [Native Stack Navigation](https://reactnavigation.org/docs/native-stack-navigator)
+- [Navigation Params](https://reactnavigation.org/docs/params)
 
 ## 🧑🏻‍💻 Autor
 
