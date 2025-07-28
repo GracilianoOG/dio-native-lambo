@@ -4,8 +4,9 @@ import { styles } from "./styles";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { CAR_ASSETS_BASE_URL } from "../../constants/car";
 import logo from "../../../assets/logo.png";
+import { PurchaseScreenProps } from "./props";
 
-const PurchaseScreen = ({ route }: any) => {
+const PurchaseScreen = ({ route }: PurchaseScreenProps) => {
   const { id, carName } = route.params;
 
   return (
