@@ -9,11 +9,11 @@ import {
   CAR_MIN_ID,
 } from "../../constants/car";
 import BuyButton from "../BuyButton";
-import { CarModel } from "./props";
+import { CardViewProps, CarModel } from "./props";
 import { handleNextItem, handlePreviousItem, loadCarData } from "./actions";
 import AntDesign from "@expo/vector-icons/AntDesign";
 
-const CardView = ({ navigation }: any) => {
+const CardView = ({ navigation }: CardViewProps) => {
   const [carData, setCarData] = useState<CarModel | null>(null);
 
   useEffect(() => {
@@ -77,7 +77,7 @@ const CardView = ({ navigation }: any) => {
   );
 
   const handlePurchase = () => {
-    navigation.navigate("Purchase", carData);
+    navigation.navigate("Purchase", carData as CarModel);
   };
 
   return (
