@@ -4,8 +4,9 @@ import { styles } from "./styles";
 import CardView from "../../components/CardView";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { StatusBar } from "expo-status-bar";
+import { GarageScreenProps } from "./props";
 
-const GarageScreen = ({ navigation }: any) => {
+const GarageScreen = ({ navigation }: GarageScreenProps) => {
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.cameraBox}>
